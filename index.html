@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+  <meta charset='utf-8'>
+  <title>EM Blog Post Grid</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+
+<style>
+/*
+  widthRegular = 1200
+  leftMarginForRegular  = 150 / widthRegular * 100 = 12.5
+  widthForRegular       = 640 / widthRegular * 100 = 53.333333
+  rightMarginForRegular = 410 / widthRegular * 100 = 34.166667
+
+  widthWide = 1500
+  leftMarginForWide  = 300 / widthWide * 100 = 20
+  widthForWide       = 640 / widthWide * 100 = 42.666667
+  rightMarginForWide = 560 / widthWide * 100 = 37.333333
+ */
+  html, body,
+  .content {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: 1.6666666666666667vw/1.2 'FranklinGothicBookITC', Arial, sans-serif;
+  }
+  div { box-sizing: border-box; }
+  .page-header {
+    height: 8.833333333333334vw;
+    padding-top: 3.5vw;
+    text-align: center;
+  }
+  .page-header::after {
+    content: 'Regular';
+    margin-left: 0.4em;
+    font-size: 0.5em;
+    vertical-align: super;
+  }
+  .post-cover {
+    height: 41.16667vw;
+    padding: 23vw 3.3333333333333335vw 8.333333333333334vw 12.5vw;
+    background-color: #37d1ff;
+  }
+  .h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.833333333333333vw;
+    line-height: 5vw;
+    letter-spacing: -0.16666666666666666vw;
+  }
+  .h1-b {
+    display: block;
+    font-size: 6vw;
+  }
+  .h1-b, .page-header, .post-lead {
+    font-family: 'FranklinGothicDemiITC', Arial, sans-serif;
+  }
+  .post-lead, .post-paragraph {
+    width: 53.333333vw;
+    margin-left: 12.5vw;
+    ~margin-right: 34.166666667vw;
+    margin-bottom: 1em;
+  }
+  .post-lead {
+    margin-top: 7.5vw;
+    font-size: 2.4166666666666665vw;
+    line-height: 1.5em;
+  }
+  .post-paragraph {
+    line-height: 1.7em;
+  }
+
+  @media (min-width: 1400px) {
+
+    html, body,
+    .content {
+      font-size: 1.34717vw;
+    }
+    .page-header {
+      height: 7.14vw;
+      padding-top: 2.829057vw;
+    }
+    .page-header::after {
+      content: 'Wide';
+    }
+    .post-cover {
+      height: 33.275097vw;
+      padding: 18.590943vw 3.3333333333333335vw 6.735849vw 20vw;
+    }
+    .h1 {
+      font-size: 3.906792vw;
+      line-height: 4.041509vw;
+      letter-spacing: -0.134717vw;
+    }
+    .h1-b {
+      font-size: 4.849811vw;
+    }
+    .post-lead, .post-paragraph {
+      width: 42.666667vw;
+      margin-left: 20vw;
+    }
+    .post-lead {
+      margin-top: 6.062264vw;
+      font-size: 1.953396vw;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class='content'>
+    <div class='page-header'>Martian Chronicles</div>
+    <div class='post'>
+      <div class='post-cover'><h1 class='h1'><span class='h1-b'>New feature in Rails 5:</span> Render views outside of actions</h1></div>
+      <div class='post-content'>
+        <div class='post-lead'>Ruby on Rails has been around a long time but nevertheless continues to evolve, and the most surprising thing is that DHH is still at it — imagine such commitment to the project after 11 years!</div>
+        <div class='post-paragraph'>DHH has inspired a lot of new features in Rails 5. By the way, if you want to start contributing to Rails, you can begin doing so by tracking his issues. They provide many opportunities while being very broad in complexity. For example, most recent basic ones are Enumerable#without and Enumerable#pluck.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
